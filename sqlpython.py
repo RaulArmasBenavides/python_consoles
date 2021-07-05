@@ -1,7 +1,6 @@
 import pyodbc 
 
 
-
 def EstablecerConexion():
     try:
         cnxn = pyodbc.connect("Driver={SQL Server Native Client 11.0};"
@@ -29,8 +28,16 @@ cursor = EstablecerConexion()
 
 cursor.execute('SELECT * FROM supervisor.ubicacion')
 
+ubicacion = cursor.fetchone()
+ubicaciones = cursor.fetchall()
+
+#print(ubicacion)
+#print(ubicaciones)
+
+print("-------------------")
 for row in cursor:
     print('row = %r' % (row,))
 
 
-    #https://stackoverflow.com/questions/33725862/connecting-to-microsoft-sql-server-using-python/33727190
+cursor.close()
+#https://stackoverflow.com/questions/33725862/connecting-to-microsoft-sql-server-using-python/33727190
