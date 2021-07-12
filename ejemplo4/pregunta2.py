@@ -59,7 +59,7 @@ def suma_matriz(A,B,col,fil):
  #Proceso
  for i in range(fil):
   for j in range(col):
-   C.append( A[i][j] - B[i][j])
+   C.append( A[i][j] + B[i][j])
  print(C)
 
 #FUNCIÓN PARA RESTAR MATRICES
