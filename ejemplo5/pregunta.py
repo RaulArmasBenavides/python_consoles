@@ -1,3 +1,22 @@
+#TEMA : CIENCIA DE DATOS REGRESIÓN LINEAL
+"""
+Elabore un programa en Python que elabore un diagrama de dispersión de datos X (°F) e Y (Espuma %), 
+póngalos un diagrama de dispersión, luego calcule la recta de correlación cuya formula es: 
+y luego debe responder a estimar el porcentaje de espuma con los °F que le brinde el usuario. 
+Debe solicitar el número de puntos a correlacionar y empleando todo lo enseñado en clase. 
+Considere como ejemplo el siguiente caso: 
+determine si existe una relación entre las temperaturas del producto y el porcentaje de espuma en una bebida refrescante. 
+Los datos son los siguientes:
+a) Realice los análisis de correlación correspondiente con los datos mostrados.
+
+b) ¿Qué porcentaje de espuma se tiene a los 35 y 52 °F? Sustente su respuesta
+
+     Se pide:
+
+(5p) Elabore el código en Python correspondiente empleando funciones y librerías enseñadas en clases.
+
+(2p) Elabore un histograma mensual de horas y del total anual por cajero
+"""
 
 # shows how linear regression analysis can be applied to 1-dimensional data
 
