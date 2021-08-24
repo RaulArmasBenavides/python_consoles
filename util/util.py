@@ -6,7 +6,14 @@ locale.setlocale(locale.LC_ALL,'es')
 
 
 
-
+def multiples(n,m,starting_from=1,increment_by=1):
+    """
+    #Una forma elegante para calcular los múltiplos 
+    # Where n is the number 10 and m is the number 2 from your example. 
+    # In case you want to print the multiples starting from some other number other than 1 then you could use the starting_from parameter
+    # In case you want to print every 2nd multiple or every 3rd multiple you could change the increment_by 
+    """
+    print(n*x for x in range(starting_from,m+1,increment_by))
 
 #es buena práctica  indicar el tipo de datos que devuelve el método
 # método para determinar si es par o impar
@@ -59,6 +66,8 @@ cadena_aux ="        hola     mundo !    ".strip()
 print(cadena_aux)
 cadena_aux ="*hola mundo!***".strip('*')
 print(cadena_aux)
+
+
 
 
 
