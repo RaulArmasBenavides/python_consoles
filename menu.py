@@ -27,3 +27,5 @@ show_menu()
 keyboard.add_hotkey('up', up)
 keyboard.add_hotkey('down', down)
 keyboard.wait()
+
+
