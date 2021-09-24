@@ -10,3 +10,5 @@ d. Solicite un número y verifique que no está dentro de la lista, además que 
 Insértelo en la posición siguiente del mayor menor, es decir: [2, 5, 7, 9] y si ingreso 8 debe estar después del 7; 
 además elimine el mayor menor del número ingresado.
 """  
+
+![image](https://user-images.githubusercontent.com/20383126/134627193-dbdbe541-a743-40cf-9f2b-d0ab5d77f628.png)
