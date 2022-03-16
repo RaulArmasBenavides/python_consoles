@@ -8,7 +8,7 @@ def ecuacion2grado(a,b,c)->float:
    if x < 0 :
         print("Solucion solo en numeros complejos,se mostrará parte real e imaginaria")   
         x1 = -b/(2*a) #-> parte real 
-        x2 = sqrt(abs(x))/(2*a) #->parte imaginaria 
+        x2 = math.sqrt(abs(x))/(2*a) #->parte imaginaria 
    else :
         x1 = (-b + math.sqrt(x)) / (2*a)
         x2 = (-b - math.sqrt(x)) / (2*a)
