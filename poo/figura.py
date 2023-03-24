@@ -90,6 +90,8 @@ class Cuadrado(Figura):
 
 # bloque principal
 print("*APLICATIVO DE FIGURAS*")
+print("Hello world UTP !")
+print("ESte es mi cambio Dayana")
 figura = input("Ingresar figura que desea graficar (C) para cuadrado o (R) para rectángulo :")
 if figura =="C":
  lado = float(input("Ingresar longitud de lado: "))
