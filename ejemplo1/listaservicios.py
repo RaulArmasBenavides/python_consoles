@@ -1,7 +1,4 @@
 import pandas as pd
-from tqdm import tqdm 
-from time import sleep 
-
 global lista #definimos lista servicios
 lista = list()
 
