@@ -18,8 +18,10 @@ class YouTubeDownloder:
     def showStreams(self):
         self.streamNo = 1
         for stream in self.youtube.streams:
-            print("{0} => resolution:{1}/fps:{2}/type:{3}".format(self.streamNo,
-                                                                  stream.resolution, stream.fps, stream.type))
+            resolution = stream.resolution if hasattr(stream, 'resolution') else 'N/A'
+            fps = getattr(stream, 'fps', 'N/A')  # Usando getattr para obtener 'fps' o 'N/A' si no existe
+            stream_type = stream.type if hasattr(stream, 'type') else 'N/A'
+            print(f"{self.streamNo} => resolution:{resolution}/fps:{fps}/type:{stream_type}")
             self.streamNo += 1
         self.chooseStream()
 
