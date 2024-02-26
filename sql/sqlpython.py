@@ -3,14 +3,17 @@ import pyodbc
 
 def EstablecerConexion():
     try:
-        cnxn = pyodbc.connect("Driver={SQL Server Native Client 11.0};"
+
+        #available_drivers = pyodbc.drivers()
+        #print("Drivers ODBC disponibles:", available_drivers)
+        cnxn = pyodbc.connect("Driver={ODBC Driver 17 for SQL Server};"
                       "Server=localhost;"
-                      "Database=sifco;"
+                      "Database=NWIN;"
                       "Trusted_Connection=yes;")
         return cnxn.cursor()
     except Exception as e: 
         print("Error en la conexión")
-        print( type(e).__name__)
+        print( e)
     finally:
         print("Proceso finalizado")
 
@@ -26,18 +29,20 @@ def EstablecerConexion():
 #cursor = cnxn.cursor()
 cursor = EstablecerConexion()
 
-cursor.execute('SELECT * FROM supervisor.ubicacion')
+cursor.execute('SELECT * FROM Clientes')
 
-ubicacion = cursor.fetchone()
-ubicaciones = cursor.fetchall()
+cliente = cursor.fetchone()
+clientes = cursor.fetchall()
 
-#print(ubicacion)
-#print(ubicaciones)
+print(cliente)
+print(clientes)
 
-print("-------------------")
-for row in cursor:
-    print('row = %r' % (row,))
+
+#for row in cursor:
+ ##   print('row = %r' % (row,))
 
 
 cursor.close()
+
+print("-------------------")
 #https://stackoverflow.com/questions/33725862/connecting-to-microsoft-sql-server-using-python/33727190
