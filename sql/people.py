@@ -22,4 +22,5 @@ def create_and_connect():
     db.create_tables([Person,Pet],safe=True)
 
 
-create_and_connect()
+if __name__ == "__main__":
+    create_and_connect()

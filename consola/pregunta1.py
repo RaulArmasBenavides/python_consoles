@@ -19,16 +19,16 @@ def ecuacion2grado(a,b,c)->float:
  finally:
         print("Proceso finalizado")
 
+if __name__ =="__main__":
+  #Pedimos la entrada de los tres valores de la ecuación
+  a = float(input("Ingrese el valor de a: ")) # a = cociente del termino cuadrático
+  b = float(input("Ingrese el valor de b: ")) # b = cociente de termino lineal
+  c = float(input("Ingrese el valor de c: ")) # c = cociente de termino independiente
 
-#Pedimos la entrada de los tres valores de la ecuación
-a = float(input("Ingrese el valor de a: ")) # a = cociente del termino cuadrático
-b = float(input("Ingrese el valor de b: ")) # b = cociente de termino lineal
-c = float(input("Ingrese el valor de c: ")) # c = cociente de termino independiente
-
-resultado = ecuacion2grado(a,b,c)
-#Imprimiendo  resultados
-if resultado[0]>0 :
-  print("resultado: x1", resultado[1] , "x2", resultado[2])
-else: #si el resultado es complejo 
-  print("resultado: x1", resultado[1],"+",resultado[2],"i")
-  print("resultado: x1", resultado[1],"-",resultado[2],"i")
+  resultado = ecuacion2grado(a,b,c)
+  #Imprimiendo  resultados
+  if resultado[0]>0 :
+    print("resultado: x1", resultado[1] , "x2", resultado[2])
+  else: #si el resultado es complejo 
+    print("resultado: x1", resultado[1],"+",resultado[2],"i")
+    print("resultado: x1", resultado[1],"-",resultado[2],"i")

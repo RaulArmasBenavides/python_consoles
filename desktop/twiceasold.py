@@ -3,6 +3,11 @@ def twice_as_old(dad_year_old,son_years_old):
   return abs(dad_year_old - (2*son_years_old))
     
 
-print(twice_as_old(50,26))
+#function which tells us if a given character is a letter or not.
+def is_it_letter(s):
+    return s.isalpha()
+
+if __name__ =="__main__":
+ print(twice_as_old(50,26))
       
     

@@ -11,29 +11,28 @@ mydb = mysql.connector.connect(host="localhost", username ="root", password ="",
 
 
 def agregar_area():
-   area = input("Nombre del área nueva que desea ingresar")
-   cursor = mydb.cursor()
-   try:
-   		cursor.execute("insert into area(nombre) values ('{}')".format(area))
-   except:
-   		print("Hubo un error al insertar regsitro en la tabla area")
-   else: 
-   	    print("Área registrada correctamente")
-   mydb.commit()
-   mydb.close()
-
+    area = input("Nombre del área nueva que desea ingresar: ")
+    cursor = mydb.cursor()
+    try:
+        # Usar parámetros en lugar de formato de cadena para prevenir inyección SQL
+        cursor.execute("INSERT INTO area(nombre) VALUES (%s)", (area,))
+        print("Área registrada correctamente")
+    except Exception as e:
+        print("Hubo un error al insertar registro en la tabla área:", e)
+    finally:
+        mydb.commit()
+        cursor.close() 
 	
-
-
 #Menù 
-while True:
-    print("Bienvenido al menù de la empresa ")
-    opcion = input(" Introduce una opciòn:(1) Agregar un àrea")
-    if opcion =="1":
-    	agregar_area()
-    elif opcion =="2":
-    	print("Saliendo del programa")
-    	break
-    else:
-    	print("opcion incorrecta")
-   
+if __name__ == "__main__":
+   while True:
+      print("Bienvenido al menù de la empresa ")
+      opcion = input(" Introduce una opciòn:(1) Agregar un àrea")
+      if opcion =="1":
+         agregar_area()
+      elif opcion =="2":
+         print("Saliendo del programa")
+         break
+      else:
+         print("opcion incorrecta")
+      

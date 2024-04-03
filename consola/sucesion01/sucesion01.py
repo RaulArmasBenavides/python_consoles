@@ -39,26 +39,26 @@ def crearLista(n):
    
 
 #Bloque principal 
-
-locale.setlocale(locale.LC_ALL,'es')
-cantidad =0 
-Lista = []
-ListaSecuencia = []
-cantidad = int(input("Ingrese el número de términos a calcular: "))
-Lista = crearLista(cantidad)
-print(Lista)
-ListaSecuencia = funcionSecuencia(Lista,cantidad)
-print(ListaSecuencia)
-elemento1 = int(input("Ingrese un n1 para agregar a la ListaSecuencia: "))
-elemento2 = int(input("Ingrese un n2 para agregar a la ListaSecuencia: "))
-#Ingrese dos elementos
-while ListaSecuencia.count(elemento1) > 0  or  ListaSecuencia.count(elemento2)> 0:
-   print("Por favor ingrese números que no estén en la ListaSecuencia")
-   elemento1 = int(input("Ingrese un n1 para agregar a la ListaSecuencia: "))
-   elemento2 = int(input("Ingrese un n2 para agregar a la ListaSecuencia: "))
+if __name__ == "__main__":
+       locale.setlocale(locale.LC_ALL,'es')
+       cantidad =0 
+       Lista = []
+       ListaSecuencia = []
+       cantidad = int(input("Ingrese el número de términos a calcular: "))
+       Lista = crearLista(cantidad)
+       print(Lista)
+       ListaSecuencia = funcionSecuencia(Lista,cantidad)
+       print(ListaSecuencia)
+       elemento1 = int(input("Ingrese un n1 para agregar a la ListaSecuencia: "))
+       elemento2 = int(input("Ingrese un n2 para agregar a la ListaSecuencia: "))
+       #Ingrese dos elementos
+       while ListaSecuencia.count(elemento1) > 0  or  ListaSecuencia.count(elemento2)> 0:
+              print("Por favor ingrese números que no estén en la ListaSecuencia")
+              elemento1 = int(input("Ingrese un n1 para agregar a la ListaSecuencia: "))
+              elemento2 = int(input("Ingrese un n2 para agregar a la ListaSecuencia: "))
 else:
-		print("Validación correcta")
-ListaSecuencia.append(elemento1)
-ListaSecuencia.append(elemento2)
-ListaSecuencia.sort()
-print(ListaSecuencia)	
+         print("Validación correcta")
+         ListaSecuencia.append(elemento1)
+         ListaSecuencia.append(elemento2)
+         ListaSecuencia.sort()
+         print(ListaSecuencia)	
