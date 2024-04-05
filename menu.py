@@ -32,10 +32,11 @@ def select_option():
         print("Seleccionaste salir. ¡Adiós!")
         exit()  # Sale del programa.
 
-show_menu()
-keyboard.add_hotkey('up', up)
-keyboard.add_hotkey('down', down)
-keyboard.add_hotkey('enter', select_option)  # Agrega la tecla Enter para seleccionar una opción.
 
-keyboard.wait('esc')
+if __name__ =="__main__":
+    show_menu()
+    keyboard.add_hotkey('up', up)
+    keyboard.add_hotkey('down', down)
+    keyboard.add_hotkey('enter', select_option)  # Agrega la tecla Enter para seleccionar una opción.
+    keyboard.wait('esc')
 
