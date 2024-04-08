@@ -1,16 +1,4 @@
-"""  Escriba un programa que calcule términos de la sucesión Un+1 = 3 Un + 1, si Un es impar y Un+1 = Un / 2, si Un es par. 
-El programa tiene que pedir el término U0 y el número de términos a calcular. Muestre la lista. 
-a. 
-Muestre los elementos que se encuentren en el medio y los extremos. 
-b. Agregue dos números mayores a la lista mostrada. 
-c. Solicite un número y verifique que no está dentro de la lista, además que dichos números estén dentro de los valores extremos de la lista. 
-Insértelo en la posición siguiente del mayor menor, es decir: [2, 5, 7, 9] y si ingreso 8 debe estar después del 7. 
-d. Solicite un número y verifique que no está dentro de la lista, además que dichos números estén dentro de los valores extremos de la lista. 
-Insértelo en la posición siguiente del mayor menor, es decir: [2, 5, 7, 9] y si ingreso 8 debe estar después del 7; 
-además elimine el mayor menor del número ingresado.
-"""  
 import locale
-
 def funcionSecuencia(Lista,n)->float:
  try:
  
@@ -40,25 +28,27 @@ def crearLista(n):
 
 #Bloque principal 
 if __name__ == "__main__":
-       locale.setlocale(locale.LC_ALL,'es')
-       cantidad =0 
-       Lista = []
-       ListaSecuencia = []
-       cantidad = int(input("Ingrese el número de términos a calcular: "))
-       Lista = crearLista(cantidad)
-       print(Lista)
-       ListaSecuencia = funcionSecuencia(Lista,cantidad)
-       print(ListaSecuencia)
-       elemento1 = int(input("Ingrese un n1 para agregar a la ListaSecuencia: "))
-       elemento2 = int(input("Ingrese un n2 para agregar a la ListaSecuencia: "))
-       #Ingrese dos elementos
-       while ListaSecuencia.count(elemento1) > 0  or  ListaSecuencia.count(elemento2)> 0:
-              print("Por favor ingrese números que no estén en la ListaSecuencia")
-              elemento1 = int(input("Ingrese un n1 para agregar a la ListaSecuencia: "))
-              elemento2 = int(input("Ingrese un n2 para agregar a la ListaSecuencia: "))
-else:
-         print("Validación correcta")
-         ListaSecuencia.append(elemento1)
-         ListaSecuencia.append(elemento2)
-         ListaSecuencia.sort()
-         print(ListaSecuencia)	
+    locale.setlocale(locale.LC_ALL, 'es')
+    
+    # Solicita al usuario el número de términos a calcular
+    cantidad = int(input("Ingrese el número de términos a calcular: "))
+    Lista = crearLista(cantidad)
+    print(Lista)
+    
+    ListaSecuencia = funcionSecuencia(Lista, cantidad)
+    print(ListaSecuencia)
+    
+    # Solicita al usuario ingresar dos elementos nuevos, asegurándose de que no estén en ListaSecuencia
+    while True:
+        elemento1 = int(input("Ingrese un n1 para agregar a la ListaSecuencia: "))
+        elemento2 = int(input("Ingrese un n2 para agregar a la ListaSecuencia: "))
+        
+        if elemento1 not in ListaSecuencia and elemento2 not in ListaSecuencia:
+            break  # Sal del bucle si los elementos no están en la ListaSecuencia
+        print("Por favor ingrese números que no estén en la ListaSecuencia")
+    
+    # Agrega los nuevos elementos y muestra la lista actualizada
+    ListaSecuencia.append(elemento1)
+    ListaSecuencia.append(elemento2)
+    ListaSecuencia.sort()
+    print(ListaSecuencia)
