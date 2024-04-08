@@ -1,1 +1,0 @@
-mysqldump -u root -p bdasher1 --password=1234 > C:\programas_phyton\backupdiariobdasher1\backupBdasher1.sql
