@@ -1,9 +1,6 @@
 import peewee as pw
 
-
 db = pw.SqliteDatabase('people.db')
-
-
 class Person(pw.Model):
     name = pw.CharField()
     birthday = pw.DateField()
@@ -16,6 +13,9 @@ class Pet(pw.Model):
     owner = pw.ForeignKeyField(Person, related_name='pets')
     name = pw.CharField()
     animal_type = pw.CharField()
+    
+    class Meta:
+        database = db
 
 def create_and_connect():
     db.connect()
