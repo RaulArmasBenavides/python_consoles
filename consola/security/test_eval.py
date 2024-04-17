@@ -6,7 +6,7 @@ def run_code(string):
     """ Evaluate the passed string as code """
     try:
         print(string)
-        #eval(string, {})
+        eval(string, {})
     except Exception as e:
         print(repr(e))
         
