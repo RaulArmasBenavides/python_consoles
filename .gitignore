@@ -127,8 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-vmedia
-#el vmedia es el entorno virtual aquí RMAB
+
 
 # Spyder project settings
 .spyderproject
