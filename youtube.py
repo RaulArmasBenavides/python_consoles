@@ -9,9 +9,9 @@ class YouTubeDownloder:
         self.url = str(input("Enter the url of video : "))
         self.youtube = pytube.YouTube(
             self.url, on_progress_callback=YouTubeDownloder.onProgress)
-        self.showTitle()
+        self.showtitle()
 
-    def showTitle(self):
+    def showtitle(self):
         print("title : {0}\n".format(self.youtube.title))
         self.showStreams()
 
